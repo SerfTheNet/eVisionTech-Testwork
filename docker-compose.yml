@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  directory_service:
+     build: dirview_service/
+     network_mode: host
+     volumes:
+      - /:/outerspace
+     expose:
+      - "8000"
+     ports:
+      - 8000:8000
